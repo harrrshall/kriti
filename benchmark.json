@@ -1,0 +1,594 @@
+{
+  "schema_version": 2,
+  "name": "kriti-nepali-asr-completed-snapshot-v1",
+  "scope": {
+    "evaluated_systems": 19,
+    "replicates_per_system": 2,
+    "records": 3630,
+    "view_sha256": "2374cac54831ce9c69282503763d7f1e12ada0404ae34ed471a7538cdae6c61f",
+    "sources": {
+      "fleurs_ne_np": 304,
+      "indicvoices_nepali": 2569,
+      "openslr54": 757
+    },
+    "primary_metric": "punctuation_insensitive_wer",
+    "tie_policy": "exact primary error ratios share a competition rank",
+    "selection_view": true
+  },
+  "systems": [
+    {
+      "rank": 1,
+      "key": "kriti",
+      "model": "kriti",
+      "model_id": "harrrshall/kriti",
+      "revision": "artifact-hashes-in-model.json",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ai4bharat_nemo_with_acoustic_danda_head",
+      "decoder": "rnnt",
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "compact_prediction_embedding": true,
+        "decoder": "rnnt",
+        "language_id": "ne",
+        "nepali_only_runtime_prune": true,
+        "punctuation_threshold": 0.711,
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "1a42d4b0b527f2c21a4a28dfa84e7a2d769762bc4a6d80c59a12821e85b89f0f",
+        "1a42d4b0b527f2c21a4a28dfa84e7a2d769762bc4a6d80c59a12821e85b89f0f"
+      ],
+      "punctuation_insensitive_wer": 0.2407729005728886,
+      "punctuation_insensitive_cer": 0.08287672638469905,
+      "raw_wer": 0.24685364976627114,
+      "raw_cer": 0.08404221560257552,
+      "artifact_sha256": {
+        "kriti.nemo": "0144854f0cc78f4b6115b75089fad632c39207d5256e53f92da996b9bbe43582",
+        "punctuation_head.json": "5874b6fc6b4f1172dffa249a42f5054ffe196cff9b97854fe180eafc4134e9bb"
+      },
+      "release_validation": {
+        "predictions_sha256": "1a42d4b0b527f2c21a4a28dfa84e7a2d769762bc4a6d80c59a12821e85b89f0f",
+        "benchmark_hypothesis_mismatches": 0
+      }
+    },
+    {
+      "rank": 1,
+      "key": "ai4bharat-ne-hybrid-rnnt",
+      "model": "AI4Bharat Nepali IndicConformer hybrid (RNNT)",
+      "model_id": "ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large",
+      "revision": "cd09ba7720f3b17d259f6bfd03e1463bc5ba517d",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ai4bharat_nemo",
+      "decoder": "rnnt",
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "compact_prediction_embedding": false,
+        "decoder": "rnnt",
+        "language_id": "ne",
+        "nepali_only_runtime_prune": false,
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "3656a93d28c3d1fb6dfea1c3ab7e3df6eb66a58820064e03ec331a2dee01f94b",
+        "3656a93d28c3d1fb6dfea1c3ab7e3df6eb66a58820064e03ec331a2dee01f94b"
+      ],
+      "punctuation_insensitive_wer": 0.2407729005728886,
+      "punctuation_insensitive_cer": 0.08287672638469905,
+      "raw_wer": 0.25192776379399895,
+      "raw_cer": 0.08501127728471647
+    },
+    {
+      "rank": 3,
+      "key": "ai4bharat-ne-hybrid-ctc",
+      "model": "AI4Bharat Nepali IndicConformer hybrid (CTC)",
+      "model_id": "ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large",
+      "revision": "cd09ba7720f3b17d259f6bfd03e1463bc5ba517d",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ai4bharat_nemo",
+      "decoder": "ctc",
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "compact_prediction_embedding": false,
+        "decoder": "ctc",
+        "language_id": "ne",
+        "nepali_only_runtime_prune": false,
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "c47ad3a6bac4c1d7b46712cc9836d72dd71e90b2dbb472d65c1585fa92ba1340",
+        "c47ad3a6bac4c1d7b46712cc9836d72dd71e90b2dbb472d65c1585fa92ba1340"
+      ],
+      "punctuation_insensitive_wer": 0.25310896860091425,
+      "punctuation_insensitive_cer": 0.08451503895695239,
+      "raw_wer": 0.26431339646010626,
+      "raw_cer": 0.08665595239313877
+    },
+    {
+      "rank": 4,
+      "key": "qwen3-asr-nepali-public",
+      "model": "Qwen3-ASR-Nepali (fine-tuned Nepali ASR)",
+      "model_id": "sidskarki/Qwen3-ASR-Nepali",
+      "revision": "6ae9dd5306dde33ff2507820c626bac6fb867a7f",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "qwen3",
+      "decoder": null,
+      "language": "Nepali",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "Nepali",
+        "max_new_tokens": null,
+        "precision": "backend_declared",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "f6a7268de4cc2bc2f3944453efcab325978e7b9551300731672308f8f0fa1ecc",
+        "f6a7268de4cc2bc2f3944453efcab325978e7b9551300731672308f8f0fa1ecc"
+      ],
+      "punctuation_insensitive_wer": 0.5240433558895742,
+      "punctuation_insensitive_cer": 0.24217611689137886,
+      "raw_wer": 0.5551959726717008,
+      "raw_cer": 0.24943784185868761
+    },
+    {
+      "rank": 5,
+      "key": "whisper-large-v3-nepali-kiranpantha",
+      "model": "Whisper large-v3 Nepali (kiranpantha)",
+      "model_id": "kiranpantha/whisper-large-v3-nepali",
+      "revision": "934c2bfe2955282afec7c7ad9271b3e9ce6c7587",
+      "processor_id": "openai/whisper-large-v3",
+      "processor_revision": "06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "backend": "whisper",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": 256,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "a5210ed5016f1e46815c2132073a828f2c1f53d646212df48e51433d3579f0cb",
+        "a5210ed5016f1e46815c2132073a828f2c1f53d646212df48e51433d3579f0cb"
+      ],
+      "punctuation_insensitive_wer": 0.5570593049484001,
+      "punctuation_insensitive_cer": 0.24941342253415147,
+      "raw_wer": 0.57836909185345,
+      "raw_cer": 0.253969228879403
+    },
+    {
+      "rank": 6,
+      "key": "whisper-large-v3-nepali-openslr",
+      "model": "Whisper large-v3 Nepali OpenSLR",
+      "model_id": "Dragneel/whisper-large-v3-nepali-openslr",
+      "revision": "e621bbb7a0ade7e047e2255cb947d2e4110d2466",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "whisper",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": 256,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "d0edc9cc89282843634bd124f86e220e9a37eaafda54047b279122a94a417e5a",
+        "d0edc9cc89282843634bd124f86e220e9a37eaafda54047b279122a94a417e5a"
+      ],
+      "punctuation_insensitive_wer": 0.557678104477314,
+      "punctuation_insensitive_cer": 0.24670456333326493,
+      "raw_wer": 0.5745135642654521,
+      "raw_cer": 0.2506082226931043
+    },
+    {
+      "rank": 7,
+      "key": "nepali-asr-whisper-medium-paudeletal",
+      "model": "Whisper Medium Nepali (Paudel et al.)",
+      "model_id": "sumanpaudel1997/nepali-asr-whisper-medium",
+      "revision": "885f18aa455eedc1df0b99823977819f26e63d75",
+      "processor_id": "openai/whisper-medium",
+      "processor_revision": "abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "backend": "whisper",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": 256,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "194b9832531b87132798b3308287e932390d1fa88f4798ef5382fd8a3a72f7be",
+        "194b9832531b87132798b3308287e932390d1fa88f4798ef5382fd8a3a72f7be"
+      ],
+      "punctuation_insensitive_wer": 0.5840269876439707,
+      "punctuation_insensitive_cer": 0.27638914540964654,
+      "raw_wer": 0.6086339845778896,
+      "raw_cer": 0.282310870893004
+    },
+    {
+      "rank": 8,
+      "key": "mms-1b-all-npi",
+      "model": "Meta MMS-1B-All (Nepali adapter)",
+      "model_id": "facebook/mms-1b-all",
+      "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "mms",
+      "decoder": null,
+      "language": "npi",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "npi",
+        "max_new_tokens": null,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "dcbefc9587c2fd7ec2163c8576e1f5df4c02be843ff865aec895e76ff3afa26c",
+        "dcbefc9587c2fd7ec2163c8576e1f5df4c02be843ff865aec895e76ff3afa26c"
+      ],
+      "punctuation_insensitive_wer": 0.6012735293530551,
+      "punctuation_insensitive_cer": 0.22785541806042944,
+      "raw_wer": 0.6127492109153382,
+      "raw_cer": 0.23010779105119308
+    },
+    {
+      "rank": 9,
+      "key": "nepali-asr-mms-1b",
+      "model": "MMS-1B Nepali (Paudel et al.)",
+      "model_id": "sumanpaudel1997/nepali-asr-mms-1b",
+      "revision": "1757b0fdf60ded4d5fa3294b63eba48ad4e5a32f",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ctc",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": null,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "ffc35c3a19103d277d1304a1260c07fc29395be452b7eae79693bab6bdbb443e",
+        "ffc35c3a19103d277d1304a1260c07fc29395be452b7eae79693bab6bdbb443e"
+      ],
+      "punctuation_insensitive_wer": 0.6076611373934567,
+      "punctuation_insensitive_cer": 0.24783667494373646,
+      "raw_wer": 0.6323065244316592,
+      "raw_cer": 0.25355976619680826
+    },
+    {
+      "rank": 10,
+      "key": "wav2vec2-xlsr-300m-nepali-shniranjan",
+      "model": "XLS-R 300M Nepali (shniranjan)",
+      "model_id": "shniranjan/wav2vec2-large-xlsr-300m-nepali",
+      "revision": "8b2f97cbca949f7d6d805ff5e03b62b82d106198",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ctc",
+      "decoder": "greedy",
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "decoder": "greedy",
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": null,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "e0fefd12ecd5093565b42743adbb962a7343597a6c586bd163038dcac74e38a1",
+        "e0fefd12ecd5093565b42743adbb962a7343597a6c586bd163038dcac74e38a1"
+      ],
+      "punctuation_insensitive_wer": 0.6288999341277921,
+      "punctuation_insensitive_cer": 0.3343525758104346,
+      "raw_wer": 0.639038715090495,
+      "raw_cer": 0.33592659698976685
+    },
+    {
+      "rank": 11,
+      "key": "indicconformer-ne-hybrid",
+      "model": "IndicConformer Nepali hybrid",
+      "model_id": "sumanpaudel1997/nepali-asr-conformer-hi",
+      "revision": "c3bfe5f21003224045a65705568a4cdbc906f71e",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "nemo",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "decoder": null,
+        "language": "ne",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "7fc6129c5c85ec7f2f2c2c74d7e46368c26024f0483d1d661757307699b14814",
+        "7fc6129c5c85ec7f2f2c2c74d7e46368c26024f0483d1d661757307699b14814"
+      ],
+      "punctuation_insensitive_wer": 0.7036549094756173,
+      "punctuation_insensitive_cer": 0.34641589197397854,
+      "raw_wer": 0.7326501258540093,
+      "raw_cer": 0.35395660378002297
+    },
+    {
+      "rank": 12,
+      "key": "seamless-m4t-v2-large-npi",
+      "model": "Meta SeamlessM4T v2 large",
+      "model_id": "facebook/seamless-m4t-v2-large",
+      "revision": "5f8cc790b19fc3f67a61c105133b20b34e3dcb76",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "seamless",
+      "decoder": null,
+      "language": "npi",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 8,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "npi",
+        "max_new_tokens": null,
+        "precision": "backend_declared",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "eb764a7349273e81e9a3da6957fe6e96dabe35c23d3af4051d8a3066361d1eab",
+        "eb764a7349273e81e9a3da6957fe6e96dabe35c23d3af4051d8a3066361d1eab"
+      ],
+      "punctuation_insensitive_wer": 0.7042337864542787,
+      "punctuation_insensitive_cer": 0.4389754218911394,
+      "raw_wer": 0.7140716768548484,
+      "raw_cer": 0.44084799721565376
+    },
+    {
+      "rank": 13,
+      "key": "nepali-asr-xlsr-53-paudeletal",
+      "model": "XLS-R 53 Nepali (Paudel et al.)",
+      "model_id": "sumanpaudel1997/nepali-asr-xlsr-53",
+      "revision": "36151186fa385cd83c23969a68e847b90ca377fd",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ctc",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": null,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "759c15b75e93190ebb7c1d8f74bcfdaa71f88987b94cef6b7798b0722051cedd",
+        "759c15b75e93190ebb7c1d8f74bcfdaa71f88987b94cef6b7798b0722051cedd"
+      ],
+      "punctuation_insensitive_wer": 0.7499451064934028,
+      "punctuation_insensitive_cer": 0.2936410214314542,
+      "raw_wer": 0.7648727476127691,
+      "raw_cer": 0.2976520727342212
+    },
+    {
+      "rank": 14,
+      "key": "wav2vec2-xlsr-300m-nepali-spktsagar",
+      "model": "XLS-R 300M Nepali OpenSLR (spktsagar)",
+      "model_id": "spktsagar/wav2vec2-large-xls-r-300m-nepali-openslr",
+      "revision": "bcda4d6038be2fdbd8b7af0f6dc7be89e60506a5",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ctc",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": null,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "15adcb1289f57fa6efeec890f2c2433f3893350a1861119d981dc813637c3f90",
+        "15adcb1289f57fa6efeec890f2c2433f3893350a1861119d981dc813637c3f90"
+      ],
+      "punctuation_insensitive_wer": 0.882687586082999,
+      "punctuation_insensitive_cer": 0.43844185871520724,
+      "raw_wer": 0.8864117623556674,
+      "raw_cer": 0.43971856264949655
+    },
+    {
+      "rank": 15,
+      "key": "whisper-large-v3",
+      "model": "Whisper large-v3",
+      "model_id": "openai/whisper-large-v3",
+      "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "whisper",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": 256,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "ea16f58b9106b2912e2f6559c002248a825497869dd84be2bd9a2d2af786e1e0",
+        "ea16f58b9106b2912e2f6559c002248a825497869dd84be2bd9a2d2af786e1e0"
+      ],
+      "punctuation_insensitive_wer": 0.9702177775116274,
+      "punctuation_insensitive_cer": 0.43327724079432506,
+      "raw_wer": 0.9755483638978785,
+      "raw_cer": 0.4411755673617296
+    },
+    {
+      "rank": 16,
+      "key": "vakyansh-wav2vec2-nepali-nem-130",
+      "model": "Vakyansh wav2vec2 Nepali",
+      "model_id": "Harveenchadha/vakyansh-wav2vec2-nepali-nem-130",
+      "revision": "002c6200bcdacd8558e696583361f47e8154df67",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "ctc",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 32,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": null,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "5c69336150d7c1d68d61e8b42909a9b4cac5683eaf92719aced10beab2953a04",
+        "5c69336150d7c1d68d61e8b42909a9b4cac5683eaf92719aced10beab2953a04"
+      ],
+      "punctuation_insensitive_wer": 1.0157494460746153,
+      "punctuation_insensitive_cer": 1.987769090274785,
+      "raw_wer": 1.0160214151584162,
+      "raw_cer": 1.9832393275257876
+    },
+    {
+      "rank": 17,
+      "key": "whisper-large-v3-turbo",
+      "model": "Whisper large-v3-turbo",
+      "model_id": "openai/whisper-large-v3-turbo",
+      "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "whisper",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": 256,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "89f4ef288b70c14650fce36a099d6eeb2fdeaa3d5190b0408ed8a9b906e5e365",
+        "89f4ef288b70c14650fce36a099d6eeb2fdeaa3d5190b0408ed8a9b906e5e365"
+      ],
+      "punctuation_insensitive_wer": 1.1123620176856897,
+      "punctuation_insensitive_cer": 0.5548783407553339,
+      "raw_wer": 1.1184026529226099,
+      "raw_cer": 0.5606977244111415
+    },
+    {
+      "rank": 18,
+      "key": "qwen3-asr-0.6b-base",
+      "model": "Qwen3-ASR 0.6B base",
+      "model_id": "Qwen/Qwen3-ASR-0.6B",
+      "revision": "5eb144179a02acc5e5ba31e748d22b0cf3e303b0",
+      "processor_id": null,
+      "processor_revision": null,
+      "backend": "qwen3",
+      "decoder": null,
+      "language": "Nepali",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "Nepali",
+        "max_new_tokens": null,
+        "precision": "backend_declared",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "88e8bdeaf83d2f62a2ed27fe7f53b5221bfa45882331d95e4c25db82b522ff02",
+        "88e8bdeaf83d2f62a2ed27fe7f53b5221bfa45882331d95e4c25db82b522ff02"
+      ],
+      "punctuation_insensitive_wer": 1.120206798810308,
+      "punctuation_insensitive_cer": 0.7182752228310315,
+      "raw_wer": 1.1213592233009708,
+      "raw_cer": 0.7254450347531451
+    },
+    {
+      "rank": 19,
+      "key": "whisper-large-v3-turbo-nepali-kiranpantha",
+      "model": "Whisper large-v3-turbo Nepali (kiranpantha)",
+      "model_id": "kiranpantha/whisper-large-v3-turbo-nepali",
+      "revision": "9e8f4b238b696a14f9c20c8e01b8f3ef36172399",
+      "processor_id": "openai/whisper-large-v3-turbo",
+      "processor_revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+      "backend": "whisper",
+      "decoder": null,
+      "language": "ne",
+      "decode_configuration": {
+        "batch_fallbacks_allowed": false,
+        "batch_size": 16,
+        "decoder": null,
+        "generation_prompt": null,
+        "language": "ne",
+        "max_new_tokens": 256,
+        "precision": "float32",
+        "sampling": false
+      },
+      "replicate_prediction_sha256": [
+        "ffc46aa64b592dbc565e04a87c9b5efab9178911ac20df1f4b652dfa2c183ad8",
+        "ffc46aa64b592dbc565e04a87c9b5efab9178911ac20df1f4b652dfa2c183ad8"
+      ],
+      "punctuation_insensitive_wer": 1.372437471305667,
+      "punctuation_insensitive_cer": 4.323889949174688,
+      "raw_wer": 1.3721882616165249,
+      "raw_cer": 4.3190123760095815
+    }
+  ],
+  "limitations": "Development-set selection evidence; not an untouched test or universal domain claim."
+}

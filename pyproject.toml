@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kriti-nepali-asr"
+version = "1.0.0"
+description = "Kriti, a compact Nepali RNNT automatic speech recognition model"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+  "huggingface-hub==0.23.2",
+  "jiwer>=4,<5",
+  "numpy>=1.26,<2",
+  "soundfile>=0.13,<1",
+  "torch>=2.8,<3",
+]
+
+[project.optional-dependencies]
+runtime = [
+  "datasets==2.19.2",
+  "nemo-toolkit[asr] @ git+https://github.com/AI4Bharat/NeMo.git@8dce88cf8e94963e2033c3137f7b9993b51db88a",
+  "pyarrow==16.1.0",
+  "pytorch-lightning==2.5.6",
+]
+train = ["scikit-learn>=1.7,<2"]
+test = ["pytest>=8,<10", "ruff>=0.11,<1"]
+
+[project.scripts]
+kriti = "kriti.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "kriti",
+  "language": "ne",
+  "task": "automatic-speech-recognition",
+  "license": "mit",
+  "base_model": "ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large",
+  "base_revision": "cd09ba7720f3b17d259f6bfd03e1463bc5ba517d",
+  "runtime_revision": "8dce88cf8e94963e2033c3137f7b9993b51db88a",
+  "live_parameters": 119462146,
+  "asr_parameters": 119461121,
+  "punctuation_parameters": 1025,
+  "release_validation": {
+    "view_sha256": "2374cac54831ce9c69282503763d7f1e12ada0404ae34ed471a7538cdae6c61f",
+    "records": 3630,
+    "benchmark_hypothesis_mismatches": 0,
+    "predictions_sha256": "1a42d4b0b527f2c21a4a28dfa84e7a2d769762bc4a6d80c59a12821e85b89f0f"
+  },
+  "artifacts": {
+    "kriti.nemo": {"bytes": 497766400, "sha256": "0144854f0cc78f4b6115b75089fad632c39207d5256e53f92da996b9bbe43582"},
+    "punctuation_head.json": {"bytes": 20990, "sha256": "5874b6fc6b4f1172dffa249a42f5054ffe196cff9b97854fe180eafc4134e9bb"}
+  }
+}

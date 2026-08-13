@@ -1,0 +1,12 @@
+Kriti includes weights derived from AI4Bharat IndicConformer.
+
+Base model:
+  ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large
+  revision cd09ba7720f3b17d259f6bfd03e1463bc5ba517d
+
+The upstream model card declares the model under the MIT License. The original
+model card and attribution are available at:
+https://huggingface.co/ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large
+
+The OpenSLR, FLEURS, and IndicVoices source materials retain their own licenses
+and are not redistributed in this repository or the model repository.
