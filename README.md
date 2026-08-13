@@ -4,7 +4,7 @@
 
 ### a new efficiency frontier for open nepali asr
 
-kriti is a 119m-parameter nepali-only rnnt that shares rank 1 on our 19-system development benchmark and records the lowest raw wer in the evaluated field.
+kriti is a 119m-parameter nepali-only rnnt that shares rank 1 on development benchmark and records the lowest raw wer in the evaluated field.
 
 [model weights](https://huggingface.co/harrrshall/kriti) · [model card](model-card.md) · [architecture](architecture.md) · [training](training.md) · [benchmark data](benchmark.json)
 
