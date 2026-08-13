@@ -7,17 +7,18 @@ the prediction embedding at load time, and adds a portable acoustic terminal
 punctuation head.
 
 ```mermaid
-flowchart lr
-  a[16 khz mono audio] --> b[80-bin log-mel]
-  b --> c[4x convolutional subsampling]
-  c --> d[17 conformer blocks, width 512]
-  d --> e[nepali rnnt predictor, width 640]
-  e --> f[nepali joint, width 640, 257 outputs]
-  f --> g[transcript]
-  d --> h[masked mean and standard deviation, 1024 values]
-  h --> i[logistic danda head, 1025 parameters]
-  g --> j[final nepali text]
-  i --> j
+flowchart LR
+  a["16 khz mono audio"] --> b["80-bin log-mel"]
+  b --> c["4x convolutional subsampling"]
+  c --> d["17 conformer blocks, width 512"]
+  e["previous output tokens"] --> f["nepali rnnt predictor, width 640"]
+  d --> g["nepali joint, width 640, 257 outputs"]
+  f --> g
+  g --> h["transcript"]
+  d --> i["masked mean and standard deviation, 1024 values"]
+  i --> j["logistic danda head, 1025 parameters"]
+  h --> k["final nepali text"]
+  j --> k
 ```
 
 ## signal front end
