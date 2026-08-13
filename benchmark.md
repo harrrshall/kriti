@@ -23,7 +23,7 @@ share a rank; raw wer is descriptive and never breaks a tie.
 | 10 | xls-r 300m nepali, shniranjan | 62.8900% | 33.4353% | 63.9039% | 33.5927% |
 
 the full snapshot contains 19 fully evaluated systems. `benchmark.json`
-contains exact unrounded values for the leading ten. kriti is joint first on the
+contains exact unrounded values for all 19. kriti is joint first on the
 primary metric and has the lowest raw wer in this evaluated set. this is a
 development view used during model selection, not an untouched test claim.
 
