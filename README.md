@@ -6,7 +6,11 @@
 
 kriti couples a nepali-only rnnt transcription graph with a 1,025-parameter acoustic terminal-danda head. the released live graph contains exactly 119,462,146 parameters.
 
-[model weights](https://huggingface.co/harrrshall/kriti) · [architecture](architecture.md) · [training](training.md) · [benchmark](benchmark.md) · [data](data.md) · [usage](usage.md) · [references](references.md)
+[website](https://naamchelabs.com) · [model page](https://naamchelabs.com/models/kriti-v1) · [model weights](https://huggingface.co/harrrshall/kriti)
+
+[architecture](architecture.md) · [training](training.md) · [benchmark](benchmark.md) · [data](data.md) · [usage](usage.md) · [references](references.md)
+
+**an open nepali speech recognition (ASR) model by [Naamche Labs](https://naamchelabs.com), an AI research lab in Nepal.**
 
 </div>
 
