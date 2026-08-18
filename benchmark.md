@@ -25,7 +25,8 @@ share a rank; raw wer is descriptive and never breaks a tie.
 the full snapshot contains 19 fully evaluated systems. `benchmark.json`
 contains exact unrounded values for all 19. kriti is joint first on the
 primary metric and has the lowest raw wer in this evaluated set. this is a
-development view used during model selection, not an untouched test claim.
+development view used during model selection. untouched evaluation remains a
+separate future evidence contract.
 
 ## benchmark protocol
 
@@ -40,10 +41,12 @@ development view used during model selection, not an untouched test claim.
    punctuation-insensitive error ratios and assign competition ranks.
 
 the complete registry, immutable revisions, decoder settings, and replicate
-prediction hashes are in `benchmark.json`. the view itself is not redistributed
-because one source is gated. results do
-not imply performance on every nepali domain, streaming audio, or an untouched
-product evaluation set.
+prediction hashes are in `benchmark.json`. the gated view stays inside its
+licensed data environment. the reported scope covers the frozen development
+view and completed systems. broader nepali domains, streaming audio, and an
+untouched product evaluation set require separate measurement.
+[references.md](references.md) credits every model publisher represented in the
+snapshot.
 
 ## scale efficiency
 
