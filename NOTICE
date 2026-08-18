@@ -1,12 +1,24 @@
-Kriti includes weights derived from AI4Bharat IndicConformer.
+kriti includes weights derived from the ai4bharat nepali indicconformer.
 
-Base model:
-  ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large
+base model:
+  https://huggingface.co/ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large
   revision cd09ba7720f3b17d259f6bfd03e1463bc5ba517d
 
-The upstream model card declares the model under the MIT License. The original
-model card and attribution are available at:
-https://huggingface.co/ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large
+runtime:
+  https://github.com/AI4Bharat/NeMo
+  revision 8dce88cf8e94963e2033c3137f7b9993b51db88a
 
-The OpenSLR, FLEURS, and IndicVoices source materials retain their own licenses
-and are not redistributed in this repository or the model repository.
+the upstream model card declares the checkpoint under the mit license. kriti
+retains its conformer encoder, prediction network, and nepali rnnt weights. the
+kriti release adds language-specific pruning, runtime embedding compaction, a
+1,025-parameter acoustic danda head, artifact verification, and public
+reproduction code.
+
+openslr 54, openslr 43, fleurs, and indicvoices source material retain their
+respective licenses and access terms. their speech, transcripts, speaker
+metadata, and row manifests are excluded from both the source repository and
+the model repository.
+
+benchmark checkpoints retain the authorship, ownership, model cards, and terms
+published by their respective maintainers. references.md records their exact
+role in the released research record.

@@ -29,4 +29,5 @@ print(model.transcribe("audio.wav"))
 the loader downloads `kriti.nemo` and `punctuation_head.json` from
 `harrrshall/kriti`, verifies both sha-256 values, compacts the prediction
 embedding to 257 rows, verifies the exact live parameter count, and performs
-nepali rnnt decoding plus terminal danda restoration.
+nepali rnnt decoding plus terminal danda restoration. [architecture.md](architecture.md)
+describes the graph, and [references.md](references.md) records its model lineage.

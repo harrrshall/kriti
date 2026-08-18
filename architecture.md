@@ -4,7 +4,8 @@ kriti is a nepali-only rnnt deployment derived from the mit-licensed
 [ai4bharat nepali indicconformer](https://huggingface.co/ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large).
 the release removes the ctc decoder and 21 non-nepali rnnt joint heads, compacts
 the prediction embedding at load time, and adds a portable acoustic terminal
-punctuation head.
+punctuation head. [references.md](references.md) records the upstream model,
+runtime, and architecture foundations used by this graph.
 
 ```mermaid
 flowchart LR
@@ -55,9 +56,10 @@ the frozen encoder output is pooled with a masked mean and standard deviation,
 producing 1,024 features. a binary logistic layer with 1,024 coefficients and
 one intercept estimates whether terminal devanagari danda should be appended.
 the frozen threshold is 0.711. the portable json head contains numeric values,
-not a python pickle. together, the asr graph and head contain 119,462,146 live
-parameters. the loader extracts these features from the fresh model before rnnt
-transcription, using duration-sorted batches and then restoring input order.
+in a runtime-independent representation. together, the asr graph and head
+contain 119,462,146 live parameters. the loader extracts these features from
+the fresh model before rnnt transcription, using duration-sorted batches and
+then restoring input order.
 
 ## package identity
 

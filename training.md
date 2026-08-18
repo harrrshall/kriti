@@ -3,8 +3,9 @@
 kriti starts from
 `ai4bharat/indicconformer_stt_ne_hybrid_ctc_rnnt_large` at revision
 `cd09ba7720f3b17d259f6bfd03e1463bc5ba517d`. the upstream encoder and rnnt
-weights are not retrained by this recipe. attribution and the upstream model
-card remain part of the release.
+weights remain unchanged in this recipe. attribution and the upstream model
+card remain part of the release. the complete lineage is in
+[references.md](references.md).
 
 ## data profile
 
@@ -13,7 +14,8 @@ indicvoices nepali. the full profile contains 402,905 accepted clips and
 630.2761 hours; its training split contains 393,002 clips and 608.9182 hours.
 audio is decoded to mono 16 khz, text receives unicode nfc and whitespace
 normalization, and speaker or recording groups are kept within one split. raw
-audio and row manifests are not distributed here. see [data.md](data.md).
+audio and row manifests remain in the licensed data environment. see
+[data.md](data.md).
 
 ## deterministic model construction
 
@@ -51,8 +53,9 @@ threshold is 0.711. `scripts/train_punctuation_head.py` writes portable json.
 the compression and evaluation workflow used three independent nvidia h200
 workers, each with 141 gb gpu memory, 300 gb host memory, and 28 cpu cores.
 encoder feature extraction used one gpu. the 1,025-parameter logistic fit ran on
-cpu after features were extracted. the recipe does not claim to reproduce the
-upstream base model's original pretraining.
+cpu after features were extracted. the recipe covers construction and evaluation
+of the derived kriti graph. upstream pretraining remains part of the credited
+ai4bharat model lineage.
 
 ## commands
 

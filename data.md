@@ -1,8 +1,8 @@
 # data
 
-kriti publishes data provenance and preparation logic, not speech recordings,
-transcripts, speaker metadata, or row manifests. users must obtain each source
-under its original terms.
+kriti publishes data provenance and preparation logic. speech recordings,
+transcripts, speaker metadata, and row manifests remain with their licensed
+data environment. users obtain each source under its original terms.
 
 | source | pinned version | accepted clips | accepted hours | license or access |
 |---|---|---:|---:|---|
@@ -18,5 +18,6 @@ speaker or recording cannot cross train, development, and test splits.
 
 fleurs official evaluation material remains evaluation-only. indicvoices
 requires access approval. source licenses, attribution, share-alike terms, and
-gated conditions continue to apply. this repository does not grant rights to
-the source recordings.
+gated conditions continue to apply. rights to source recordings remain with
+their respective publishers and licensors. [references.md](references.md)
+credits each source and links its official distribution record.
