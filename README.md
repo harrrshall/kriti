@@ -99,6 +99,14 @@ the public repository keeps each claim close to its evidence:
 * [model.json](model.json) binds the released graph to artifact and prediction hashes
 * [references.md](references.md) credits upstream models, software, datasets, and comparison systems
 
+## verify the benchmark independently
+
+want to trace the benchmark from its frozen sample roster through source level
+metrics and the exact kriti replay? [open the independent benchmark verification
+record](https://github.com/naamche-labs/kriti-reproducibility) for the public
+evidence audit, authorized upstream reconstruction, reproducibility limits, and
+step by step verification commands.
+
 ## license and credit
 
 kriti source code is released under mit. the released weights preserve the ai4bharat indicconformer lineage and its mit terms. datasets and benchmark checkpoints remain governed by their respective authors, licenses, model cards, and access conditions. [notice](NOTICE) and [references.md](references.md) provide the attribution record.
